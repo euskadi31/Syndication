@@ -14,7 +14,8 @@
     "require": {
         "php": ">=5.3.0",
         "ext-xmlreader": "*",
-        "ext-xmlwriter": "*"
+        "ext-xmlwriter": "*",
+        "ext-dom": "*"
     },
     "require-dev": {
         "atoum/atoum": "dev-master"
