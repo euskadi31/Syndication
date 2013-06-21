@@ -34,6 +34,7 @@ class Rss extends AbstractWriter implements WriterInterface
         $xml->startDocument('1.0', $this->feed->getEncoding());
         $xml->startElement('rss');
         $xml->writeAttribute('version', '2.0');
+        $xml->writeAttributeNS('xmlns', 'atom', null, 'http://www.w3.org/2005/Atom');
         $xml->startElement('channel');
         
         $this->_setBaseUrl($xml);
@@ -50,7 +51,7 @@ class Rss extends AbstractWriter implements WriterInterface
         $xml->writeElement('docs', 'http://www.rssboard.org/rss-specification');
 
         $this->_setLink($xml);
-        $this->_setAuthors($xml);
+        $this->_setFeedLinks($xml);
         $this->_setCopyright($xml);
         $this->_setCategories($xml);
         
@@ -196,6 +197,38 @@ class Rss extends AbstractWriter implements WriterInterface
 
         $xml->text($value);
         $xml->endElement(); // link
+    }
+
+    /**
+     * Set feed links
+     *
+     * @param  XMLWriter $xml
+     * @return void
+     * @throws InvalidArgumentException
+     */
+    protected function _setFeedLinks(XMLWriter $xml)
+    {
+        $flinks = $this->feed->getFeedLinks();
+
+        if (!$flinks || !array_key_exists('rss', $flinks)) {
+
+            throw new InvalidArgumentException(
+                'Rss 2.0 feed elements SHOULD contain one atom:link '
+                . 'element with a rel attribute value of "self".  This is the '
+                . 'preferred URI for retrieving Rss Feed Documents representing '
+                . 'this Rss feed but a feed link has not been set'
+            );
+        }
+
+        foreach ($flinks as $type => $href) {
+            $mime = 'application/' . strtolower($type) . '+xml';
+
+            $xml->startElementNS('atom', 'link', null);
+            $xml->writeAttribute('rel', 'self');
+            $xml->writeAttribute('type', $mime);
+            $xml->writeAttribute('href', $href);
+            $xml->endElement(); // link
+        }
     }
 
     /**

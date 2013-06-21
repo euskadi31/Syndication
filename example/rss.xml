@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test</title>
     <description>bla bla bla</description>
     <language>fr</language>
-    <pubDate>Fri, 21 Jun 2013 03:55:34 +0000</pubDate>
+    <pubDate>Fri, 21 Jun 2013 04:13:29 +0000</pubDate>
     <generator>Syndication 0.1.0 (https://github.com/euskadi31/Syndication)</generator>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <link>http://www.domain.com/</link>
-    <author>axel@etcheverry.biz (Axel Etcheverry)</author>
+    <atom:link rel="self" type="application/atom+xml" href="http://www.domain.com/atom"/>
+    <atom:link rel="self" type="application/rss+xml" href="http://www.domain.com/rss"/>
     <copyright>Axel Etcheverry</copyright>
     <item>
       <title>Item 1</title>
       <description><![CDATA[bla bla]]></description>
-      <pubDate>Fri, 21 Jun 2013 03:55:34 +0000</pubDate>
+      <pubDate>Fri, 21 Jun 2013 04:13:29 +0000</pubDate>
       <link>http://www.domain.com/blog/post/123</link>
       <guid>http://www.domain.com/blog/post/123</guid>
     </item>
