@@ -3,8 +3,8 @@
   <channel>
     <title>Test</title>
     <description>bla bla bla</description>
-    <language>fr-FR</language>
-    <pubDate>Fri, 21 Jun 2013 02:26:17 +0000</pubDate>
+    <language>fr</language>
+    <pubDate>Fri, 21 Jun 2013 03:55:34 +0000</pubDate>
     <generator>Syndication 0.1.0 (https://github.com/euskadi31/Syndication)</generator>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <link>http://www.domain.com/</link>
@@ -13,7 +13,7 @@
     <item>
       <title>Item 1</title>
       <description><![CDATA[bla bla]]></description>
-      <pubDate>Fri, 21 Jun 2013 02:26:17 +0000</pubDate>
+      <pubDate>Fri, 21 Jun 2013 03:55:34 +0000</pubDate>
       <link>http://www.domain.com/blog/post/123</link>
       <guid>http://www.domain.com/blog/post/123</guid>
     </item>

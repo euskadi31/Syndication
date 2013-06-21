@@ -33,6 +33,7 @@ class Atom extends AbstractWriter implements WriterInterface
         $xml->setIndentString('  ');
         $xml->startDocument('1.0', $this->feed->getEncoding());
         $xml->startElement('feed');
+        $xml->writeAttribute('xmlns', 'http://www.w3.org/2005/Atom');
 
         $this->_setLanguage($xml);
         $this->_setBaseUrl($xml);
