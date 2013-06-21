@@ -97,7 +97,7 @@ class Atom extends AbstractEntry implements EntryInterface
 
         $xml->writeElement(
             'updated', 
-            $this->entry->getDateModified()->format(DateTime::ISO8601)
+            $this->entry->getDateModified()->format(DateTime::RFC3339)
         );
     }
 
@@ -115,7 +115,7 @@ class Atom extends AbstractEntry implements EntryInterface
 
         $xml->writeElement(
             'published', 
-            $this->entry->getDateCreated()->format(DateTime::ISO8601)
+            $this->entry->getDateCreated()->format(DateTime::RFC3339)
         );
     }
 

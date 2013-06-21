@@ -137,7 +137,7 @@ class Atom extends AbstractWriter implements WriterInterface
 
         $xml->writeElement(
             'updated', 
-            $this->feed->getDateModified()->format(DateTime::ISO8601)
+            $this->feed->getDateModified()->format(DateTime::RFC3339)
         );
     }
 
