@@ -16,6 +16,7 @@ use Iterator;
 use Countable;
 use Syndication\Feed\Entry;
 use DateTime;
+use Locale;
 
 class Feed implements Iterator, Countable
 {
@@ -381,7 +382,17 @@ class Feed implements Iterator, Countable
             );
         }
 
-        $this->data['language'] = $language;
+        if (strlen($language) > 2) {
+            $locale = Locale::parseLocale($language);
+            if (isset($locale['language'])) {
+                $language = $locale['language'];
+            } else {
+                return $this;
+            }
+        }
+        
+
+        $this->data['language'] = strtolower($language);
 
         return $this;
     }
