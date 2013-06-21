@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="fr-FR">
+  <title type="text">Test</title>
+  <subtitle type="text">bla bla bla</subtitle>
+  <updated>2013-06-21T02:26:17+0000</updated>
+  <generator uri="https://github.com/euskadi31/Syndication" version="0.1.0">Syndication</generator>
+  <link rel="alternate" type="text/html" href="http://www.domain.com/"/>
+  <link rel="self" type="application/atom+xml" href="http://www.domain.com/atom"/>
+  <link rel="self" type="application/rss+xml" href="http://www.domain.com/rss"/>
+  <id>http://www.domain.com/</id>
+  <author>
+    <name>Axel Etcheverry</name>
+    <email>axel@etcheverry.biz</email>
+    <uri>http://twitter.com/euskadi31</uri>
+  </author>
+  <rights>Axel Etcheverry</rights>
+  <entry>
+    <title type="html"><![CDATA[Item 1]]></title>
+    <summary type="html"><![CDATA[bla bla]]></summary>
+    <published>2013-06-21T02:26:17+0000</published>
+    <updated>2013-06-21T02:26:17+0000</updated>
+    <link rel="alternate" type="text/html" href="http://www.domain.com/blog/post/123"/>
+    <id>http://www.domain.com/blog/post/123</id>
+    <content type="xhtml"><xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml">bla bla bla lba lbal bsd df dfg dfgdfgd</xhtml:div></content>
+  </entry>
+</feed>

@@ -1,0 +1,27 @@
+{
+    "name": "euskadi31/syndication",
+    "type": "library",
+    "description": "A PHP 5.3+ framework for Syndication",
+    "keywords": ["sdk", "RSS", "RSS Reader", "RSS Writer", "Syndication", "Atom"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Axel Etcheverry",
+            "email": "axel@etcheverry.biz",
+            "homepage": "http://twitter.com/euskadi31"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "ext-xmlreader": "*",
+        "ext-xmlwriter": "*"
+    },
+    "require-dev": {
+        "atoum/atoum": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Syndication": "src/"
+        }
+    }
+}
