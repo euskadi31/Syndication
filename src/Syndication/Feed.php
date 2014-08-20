@@ -17,6 +17,7 @@ use Countable;
 use Syndication\Feed\Entry;
 use DateTime;
 use Locale;
+use InvalidArgumentException;
 
 class Feed implements Iterator, Countable
 {
@@ -390,7 +391,7 @@ class Feed implements Iterator, Countable
                 return $this;
             }
         }
-        
+
 
         $this->data['language'] = strtolower($language);
 
@@ -1048,7 +1049,7 @@ class Feed implements Iterator, Countable
 
     /**
      * Export feed to Rss or Atom
-     * 
+     *
      * @param  string $type
      * @return string
      */

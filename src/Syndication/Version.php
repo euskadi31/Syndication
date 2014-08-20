@@ -14,6 +14,6 @@ namespace Syndication;
 
 final class Version
 {
-    const NAME = 'Syndication';
-    const VERSION = '0.1.0';
+    const NAME      = 'Syndication';
+    const VERSION   = '0.1.0';
 }
